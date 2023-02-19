@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('post_title', models.CharField(max_length=50)),
                 ('post_date', models.DateField()),
-                ('post_text', models.CharField(max_length=300)),
+                ('post_text', models.TextField()),
                 ('post_image', models.ImageField(upload_to='event_images/')),
             ],
         ),
