@@ -1,13 +1,16 @@
 
 <!doctype html>
 <html lang="en">
+
+  {% load static %}
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.108.0">
-    <title>Album example · Bootstrap v5.3</title>
+    <title>BLOG(WITH Bootstrap and Django)</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
@@ -92,13 +95,13 @@
       </a>
       <ul class="navbar-nav me-4 my-lg-0 navbar-nav-scroll flex-row">
         <li class="navitem">
-            <a class="nav-link p-3 fs-5">About Me</a>
+            <a class="nav-link p-3 fs-5" href="{% static 'AboutMe.rft' %}">About Me</a>
         </li>
         <li class="navitem">
-            <a class="nav-link p-3 fs-5">Facebook</a>
+            <a class="nav-link p-3 fs-5" target="_blank" rel="noopenernoreferrer" href="https://www.facebook.com/">Facebook</a>
         </li>
         <li class="navitem">
-            <a class="nav-link p-3 fs-5" href="http://127.0.0.1:8000/posts/">Blog</a>
+            <a class="nav-link p-3 fs-5" href="{% url 'showblog' %}">Blog</a>
         </li>
       </ul>
     </div>
@@ -116,6 +119,7 @@
         </p>
       </div>
     </div>
+    <img src="{% static 'midJourneySamurais.png' %}" class="img-fluid">
   </section>
 
   <div class="album py-5 bg-light">
